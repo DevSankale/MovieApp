@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import './App.css';
 import Search from './components/Search.jsx';
-import MovieList from './components/movieList.jsx';
+import MovieList from './components/MovieList.jsx';
 import Favorites from './pages/Favorites.jsx';
 import Navbar from './components/Navbar.jsx';
 import { MovieProvider } from "./contexts/movieContext.jsx";
