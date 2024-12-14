@@ -1,0 +1,58 @@
+.resultsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.resultCard {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #222;
+  color: #fff;
+  transition:transform 0.3s ease;
+}
+.resultCard:hover{
+transform: scale(0.8);
+cursor: pointer;
+}
+
+
+.resultCard img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  
+}
+
+.resultDetails {
+  padding: 10px;
+  text-align: center;
+}
+
+.resultDetails h1 {
+  font-size: 1rem;
+  margin: 10px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.header {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.headerContainer {
+  padding: 20px;
+}
+.heart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
