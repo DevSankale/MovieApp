@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import './App.css';
 import Search from './components/Search.jsx';
@@ -6,6 +5,7 @@ import MovieList from './components/MovieList.jsx';
 import Favorites from './pages/Favorites.jsx';
 import Navbar from './components/Navbar.jsx';
 import { MovieProvider } from "./contexts/movieContext.jsx";
+import { useState, useEffect } from "react";
 
 function App() {
   const URL = "https://api.themoviedb.org/3/search/movie";
@@ -32,12 +32,10 @@ function App() {
       setMovie('');
       fetchDefaultMovies();
     }
-  }, [location, DEFAULT_URL, API_KEY]);
+  }, [location.pathname]);
 
-  
   const onFavoriteClick = (movie) => {
     console.log(`Favorite clicked for movie: ${movie.title}`);
-    
   };
 
   return (
@@ -66,10 +64,7 @@ function App() {
               />
             }
           />
-          <Route
-            path="/favorites"
-            element={<Favorites />}
-          />
+          <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </main>
     </MovieProvider>
